@@ -1,0 +1,58 @@
+<!--REGISTRATION FORM-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Book Store</title>
+<h1 style="color: #453dd6e6; text-align: center;">Registration Form</h1>
+<style>
+    body{
+        background-color: rgba(215, 251, 251, 0.858);
+    }
+    .required::after {
+    content: "*";
+    color: red;
+    }
+</style>
+</head>
+<body >
+    <form action="" id="registrationForm" method="post">
+        <label for="HI" class="required">First Name(Minimum 6 characters)</label>
+        <input type="text" name="HI" placeholder="Enter first name" required>
+        <br><br>
+        <label for="HI" class="required">Last Name</label>
+        <input type="text" name="HI" placeholder="Enter last name" required>
+        <br><br>
+        <label for="HI" class="required">Email Address</label>
+        <input type="text" name="HI" placeholder="email id" required><br>
+        <span style="color:red">(one e-mail id only):</span> <span style="color:rgba(17, 147, 216, 0.758)"> <strong>e.g suraj@gmail.com</strong></span><br><br>
+        <label for="HI" class="required">Password(Minimum 6 characters)</label>
+        <input type="password" name="HI" placeholder="Enter password" required>
+        <br><br>
+        <label for="HI" class="required">Address</label>
+        <input type="text" name="HI" placeholder="Enter address" required>
+        <br><br>
+        <label for="HI" class="required">Mobile No</label>
+        <input type="text" name="HI" placeholder="Enter phone no" required>
+        <br><br>
+        <body>Gender: </body>
+        <label>
+        <input type="radio"/>male</label>
+        <label>
+        <input type="radio"/>female</label>
+        <br><br>
+        <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+    <script>
+       document.getElementById("registrationForm").addEventListener("input", function(event) {
+    const input = event.target;
+    const label = document.querySelector(label[for='${input.id}']);
+    if (input.value.trim() !== "") {
+      label.classList.remove("required");
+    } else {
+      label.classList.add("required");
+    }
+  });
+      </script>
+</body>
+</html>
